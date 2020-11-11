@@ -1,0 +1,23 @@
+{
+  "auth": {
+    "cognitoc8f744d1": {
+      "service": "Cognito",
+      "serviceType": "managed",
+      "providerPlugin": "awscloudformation"
+    }
+  },
+  "interactions": {
+    "lexeeb4f9a1": {
+      "service": "Lex",
+      "providerPlugin": "awscloudformation",
+      "build": true
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual"
+    }
+  }
+}

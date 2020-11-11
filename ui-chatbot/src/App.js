@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React from "react";
+import Amplify from "aws-amplify";
+import {AmplifyChatbot} from "@aws-amplify/ui-react";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import awsconfig from './aws-exports';
+
+Amplify.configure(awsconfig);
+
+const App = () => (
+  <AmplifyChatbot
+    style={{alignSelf:'center', width:100 }}
+    botName="trafficBot"    
+    botTitle="Driving Tutor chatbot (spanish)"
+    welcomeMessage="¡Hola!, ¿Cómo te puedo ayudar?"
+    placeholder={'Escribe aquí!'}
+  />
+);
 
 export default App;
